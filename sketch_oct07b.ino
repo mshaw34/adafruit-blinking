@@ -9,8 +9,10 @@ void setup() {
   CircuitPlayground.begin();
   CircuitPlayground.clearPixels();
 
-  pinMode(5, INPUT);
+  pinMode(5, INPUT); 
+}
 
+void loop() {
   while (digitalRead(5) == LOW) {}
   delay(100);
   while (digitalRead(5) == HIGH) {}
@@ -26,5 +28,3 @@ void setup() {
     delay(2000);
   }
 }
-
-void loop() {}
