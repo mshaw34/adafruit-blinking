@@ -9,13 +9,13 @@ void setup() {
   CircuitPlayground.begin();
   CircuitPlayground.clearPixels();
 
-  pinMode(5, INPUT); 
+  pinMode(5, INPUT_PULLDOWN); 
 }
 
 void loop() {
-  while (digitalRead(5) == LOW) {}
+  while (!digitalRead(5)) {}
   delay(100);
-  while (digitalRead(5) == HIGH) {}
+  while (digitalRead(5)) {}
 
   for (int count = 0; count < 5; count++) {
     
