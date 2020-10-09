@@ -2,10 +2,9 @@
 #include<Wire.h>
 #include<SPI.h>
 
-void setup() {
+const int R = 145, G = 234, B = 98;
 
-  const int R = 145, G = 234, B = 98;
-  
+void setup() {
   CircuitPlayground.begin();
   CircuitPlayground.clearPixels();
 
